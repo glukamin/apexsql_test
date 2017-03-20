@@ -1,0 +1,19 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[ICE_Disabled_User_Agents] (
+		[ID]             [int] IDENTITY(1, 1) NOT NULL,
+		[User_Agent]     [nvarchar](500) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[ICE_Disabled_User_Agents]
+	ADD
+	CONSTRAINT [PK__ICE_Disa__3214EC275749A5B5]
+	PRIMARY KEY
+	CLUSTERED
+	([ID])
+	ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[ICE_Disabled_User_Agents] SET (LOCK_ESCALATION = TABLE)
+GO

@@ -1,0 +1,12 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ICE_sp_SEO_ProductsList]
+AS
+
+SELECT 0 AS Product_ID, 'All products' AS Product_Name
+UNION
+SELECT Product_ID, Product_Name FROM dbo.ICE_Products ip
+WHERE (ip.Is_Private = 0 OR ip.Product_ID IN (300467396, 300172712, 300544515)) AND ip.Product_ID NOT IN (300576212, 300566724, 20269601, 300365236)
+ORDER BY Product_Name
+GO

@@ -1,0 +1,4 @@
+CREATE USER [davor.dumeljic]
+	WITHOUT LOGIN
+	WITH DEFAULT_SCHEMA = [dbo]
+GO

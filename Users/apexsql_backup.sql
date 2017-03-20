@@ -1,0 +1,4 @@
+CREATE USER [apexsql_backup]
+	WITHOUT LOGIN
+	WITH DEFAULT_SCHEMA = [dbo]
+GO
